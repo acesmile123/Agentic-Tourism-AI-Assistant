@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Composer gradient bg via CSS variable */
+  :root          { --composer-bg: #f6f8fb; }
+  .dark          { --composer-bg: #0b1520; }
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────────────────────── */
+@layer utilities {
+  .overflow-y-auto {
+    scrollbar-width: thin;
+    scrollbar-color: theme("colors.gray.300") transparent;
+  }
+  .dark .overflow-y-auto {
+    scrollbar-color: theme("colors.slate.700") transparent;
+  }
+  .overflow-y-auto::-webkit-scrollbar       { width: 4px; }
+  .overflow-y-auto::-webkit-scrollbar-track { background: transparent; }
+  .overflow-y-auto::-webkit-scrollbar-thumb {
+    @apply bg-gray-200 dark:bg-slate-700 rounded-full;
+  }
+}
+
+/* ── Message enter animation ────────────────────────────────────────────────── */
+@keyframes msgEnter {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.msg-enter {
+  animation: msgEnter 0.25s ease-out both;
+}
+
+/* ── Welcome screen enter ───────────────────────────────────────────────────── */
+@keyframes welcomeEnter {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.welcome-enter {
+  animation: welcomeEnter 0.4s ease-out both;
+}
+
+/* ── Streaming cursor blink ─────────────────────────────────────────────────── */
+.streaming-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  color: theme("colors.emerald.400");
+  animation: blink 0.7s steps(1) infinite;
+  font-size: 0.85em;
+  vertical-align: middle;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Capability-driven welcome cards */
+.capability-pill {
+  @apply rounded-full border border-emerald-200/70 bg-emerald-50/70 px-3 py-1 text-[11px] font-medium text-emerald-700;
+}
+.dark .capability-pill {
+  @apply border-emerald-800/60 bg-emerald-950/30 text-emerald-300;
+}
+.suggestion-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.8rem;
+}
+.suggestion-icon {
+  @apply flex h-10 w-10 items-center justify-center rounded-xl text-xl transition-transform duration-200;
+}
+.suggestion-card:hover .suggestion-icon { transform: scale(1.08) rotate(-2deg); }
+.suggestion-emerald { @apply bg-emerald-100 dark:bg-emerald-900/40; }
+.suggestion-orange  { @apply bg-orange-100 dark:bg-orange-900/40; }
+.suggestion-violet  { @apply bg-violet-100 dark:bg-violet-900/40; }
+.suggestion-sky     { @apply bg-sky-100 dark:bg-sky-900/40; }
+.suggestion-arrow {
+  @apply text-lg text-gray-300 transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-emerald-500 dark:text-slate-600;
+}
+
+/* Safe, high-level agent activity. No prompts or reasoning are rendered here. */
+.activity-card {
+  @apply min-w-[260px] max-w-md rounded-2xl rounded-bl-sm border border-violet-100 bg-white px-4 py-3 shadow-md dark:border-slate-700/60 dark:bg-slate-800/95;
+}
+.activity-heading {
+  @apply mb-2.5 flex items-center gap-2 text-xs font-semibold text-gray-700 dark:text-slate-200;
+}
+.activity-sparkle { @apply text-violet-500; }
+.activity-list { @apply space-y-2; }
+.activity-row {
+  @apply flex items-center gap-2.5 text-xs text-gray-500 transition-colors dark:text-slate-400;
+}
+.activity-state {
+  @apply flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full border border-gray-200 text-[10px] font-bold dark:border-slate-600;
+}
+.activity-running { @apply text-gray-700 dark:text-slate-200; }
+.activity-running .activity-state {
+  @apply border-emerald-300 border-t-emerald-600;
+  animation: activitySpin 0.8s linear infinite;
+}
+.activity-pending { @apply opacity-60; }
+.activity-completed .activity-state {
+  @apply border-emerald-500 bg-emerald-500 text-white;
+}
+.activity-failed .activity-state {
+  @apply border-amber-400 bg-amber-400 text-white;
+}
+.activity-note {
+  @apply mt-3 border-t border-gray-100 pt-2 text-[10px] text-gray-400 dark:border-slate-700/70 dark:text-slate-500;
+}
+@keyframes activitySpin { to { transform: rotate(360deg); } }
+
+@media (max-width: 420px) {
+  .activity-card { min-width: 0; width: min(78vw, 320px); }
+}

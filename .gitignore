@@ -1,0 +1,39 @@
+# Secrets and local environments
+.env
+.env.*
+!.env.example
+!.env.production.example
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage*
+htmlcov/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Local data, models and reports
+data/raw/
+data/processed/
+qdrant_local/
+chat_sessions/
+eval_reports/
+*.ipynb
+*.bin
+*.safetensors
+*.pt
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

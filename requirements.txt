@@ -1,0 +1,38 @@
+# API and configuration
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.34,<1.0
+pydantic-settings>=2.7,<3.0
+
+# Persistence and cache
+SQLAlchemy>=2.0,<3.0
+psycopg[binary]>=3.2,<4.0
+redis>=5.2,<7.0
+alembic>=1.14,<2.0
+PyJWT>=2.10,<3.0
+
+# RAG and generation
+google-genai>=1.0,<2.0
+cohere>=5.13,<6.0
+qdrant-client>=1.13,<2.0
+langchain-core>=0.3,<2.0
+langgraph>=1.0,<2.0
+mcp>=2.0,<3.0
+langfuse>=4.10,<5.0
+langchain-qdrant>=0.2,<2.0
+langchain-huggingface>=0.1,<2.0
+sentence-transformers>=3.3,<6.0
+fastembed>=0.5,<1.0
+
+# Existing ingestion/crawling scripts
+beautifulsoup4>=4.12,<5.0
+lxml>=5.0,<7.0
+markdownify>=0.14,<2.0
+requests>=2.32,<3.0
+selenium>=4.25,<5.0
+python-dotenv>=1.0,<2.0
+tqdm>=4.66,<5.0
+
+# Tests
+pytest>=8.3,<10.0
+pytest-asyncio>=0.25,<2.0
+httpx>=0.28,<1.0

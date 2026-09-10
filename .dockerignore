@@ -1,0 +1,13 @@
+.git
+.venv
+.env
+__pycache__
+*.py[cod]
+.pytest_cache
+frontend/node_modules
+qdrant_local
+chat_sessions
+*.ipynb
+eval_reports
+data/raw
+data/processed
