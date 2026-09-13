@@ -1,4 +1,4 @@
-# Agentic RAG Tourism Assistant (Vietnam)
+<h1 align="center">Agentic RAG Tourism Assistant (Vietnam)</h1>
 
 <div align="center">
 
@@ -10,10 +10,9 @@
 ![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-EC2-232F3E?logo=amazonwebservices&logoColor=white)
 
-**An End-to-End Agentic AI system engineered to decompose and resolve complex, compound travel queries in Vietnam. Built with LangGraph for agent orchestration, Model Context Protocol (MCP) for tool serving, and a robust hybrid search + web fallback retrieval pipeline.**
-
 </div>
 
+**An End-to-End Agentic AI system engineered to decompose and resolve complex, compound travel queries in Vietnam. Built with LangGraph for agent orchestration, Model Context Protocol (MCP) for tool serving, and a robust hybrid search + web fallback retrieval pipeline.**
 ---
 
 ## 📷 Demo
