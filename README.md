@@ -10,7 +10,7 @@
 ![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-EC2-232F3E?logo=amazonwebservices&logoColor=white)
 
-**An end-to-end Agentic AI travel assistant for Vietnam, combining LangGraph orchestration, MCP tools, hybrid RAG, real-time APIs, evaluation, and cloud deployment.**
+**An End-to-End Agentic AI system engineered to decompose and resolve complex, compound travel queries in Vietnam. Built with LangGraph for agent orchestration, Model Context Protocol (MCP) for tool serving, and a robust hybrid search + web fallback retrieval pipeline.**
 
 </div>
 
@@ -22,8 +22,11 @@
 **http://18.141.125.164/**
 
 ### Chat Interface
-<div align="lefy">
+<div align="left">
   <img src="assets/chat1.jpg" alt="Vietnam Tourism AI Agent Demo" width="900"/>
+</div>
+<div align="left">
+  <img src="assets/chat2.jpg" alt="Vietnam Tourism AI Agent Demo" width="900"/>
 </div>
 
 ---
