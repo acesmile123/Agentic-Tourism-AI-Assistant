@@ -13,7 +13,7 @@
 </div>
 </div>
 **An End-to-End Agentic AI system engineered to decompose and resolve complex, compound travel queries in Vietnam. Built with LangGraph for agent orchestration, Model Context Protocol (MCP) for tool serving, and a robust hybrid search + web fallback retrieval pipeline.**
-div
+<div>
 ---
 
 ## 📷 Demo
