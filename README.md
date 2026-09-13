@@ -22,9 +22,9 @@
 **http://18.141.125.164/**
 
 ### Chat Interface
-> Add screenshot/GIF here:
->
-> `![Vietnam Tourism AI Agent Demo](assets/demo.gif)`
+<div align="lefy">
+  <img src="assets/chat1.jpg" alt="Vietnam Tourism AI Agent Demo" width="900"/>
+</div>
 
 ---
 
