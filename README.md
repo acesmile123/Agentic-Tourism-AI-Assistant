@@ -172,19 +172,14 @@ Langfuse can trace planner calls, tool execution, retrieval, validation, self-co
 | Layer | Technologies | Key Role |
 | :--- | :--- | :--- |
 | **Frontend** | React | Chat UI and streamed responses |
-| **Web/API Layer** | FastAPI, SSE | Sessions, chat API, token streaming |
-| **Agent Orchestration** | LangGraph | Planning, routing, validation, retries |
-| **LLM** | Google Gemini | Structured planning and response generation |
+| **Backend & API** | FastAPI, SSE | API, sessions, and token streaming |
+| **Agent & LLM** | LangGraph, Google Gemini | Planning, routing, validation, and response generation |
 | **Tool Platform** | MCP Streamable HTTP | Tool discovery and execution |
-| **Vector DB** | Qdrant Cloud | Tourism knowledge retrieval |
-| **Retrieval** | Dense + Sparse, RRF | Hybrid candidate retrieval |
-| **Reranking** | Cohere Rerank | Query-document reranking |
-| **External Tools** | OpenWeatherMap, Goong, Tavily | Weather, maps, fresh web data |
-| **Persistence** | PostgreSQL | Durable sessions/messages |
-| **Memory / Cache** | Redis | Short-term memory, cache, rate limiting |
-| **Migration** | Alembic | Versioned DB schema migration |
-| **Observability** | Langfuse, structured logs | Tracing and latency monitoring |
-| **DevOps** | Docker, Nginx, GitHub Actions, AWS EC2 | Packaging, proxying, CI/CD, deployment |
+| **RAG Pipeline** | Qdrant Cloud, Dense + Sparse, RRF, Cohere Rerank | Hybrid retrieval and reranking |
+| **External Tools** | OpenWeatherMap, Goong, Tavily | Weather, maps, and fresh web data |
+| **Data & Memory** | PostgreSQL, Redis, Alembic | Persistence, memory, caching, rate limiting, and migrations |
+| **Observability** | Langfuse, Structured Logs | Tracing, evaluation insights, and latency monitoring |
+| **DevOps & Cloud** | Docker, Nginx, GitHub Actions , AWS EC2 | Containerization, reverse proxy, CI/CD, and deployment |
 
 ### Simplified Agent State
 
